@@ -22,12 +22,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('stock_trading_platform_django')
+# SECRET_KEY = os.environ.get('stock_trading_platform_django')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -179,3 +178,8 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('my_email1')
 EMAIL_HOST_PASSWORD = os.environ.get('my_email_password1')
+
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+SECRET_KEY = 'KmH22Uu3R0XyLUUQMd0DtHV0rv8dI7APKNIAilIfkGFzDbfIUfah4zu53byCxqeRnrA'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
